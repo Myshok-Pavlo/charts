@@ -1,0 +1,28 @@
+name: Deploy to kube
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ckeckout code
+        uses: actions/checkout@v2
+        
+      - name: Create kubeconfig
+        run: |
+        mkdir ${ HOME }/.kube
+        echo ${{secrets.KUBE_CONFIG}} | base64  --decod > /.kube/config
+        
+      - name: Use context
+        run: kubectl config use-context octobay-api
+        
+      - name: Deploy helm repo
+        run: |
+        PATH/.github/script.sh
+        shell: bash
+        with:
+          password: ${{ secrets.GITTOCKEN }}
