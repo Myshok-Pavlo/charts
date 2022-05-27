@@ -14,11 +14,12 @@ spec:
     spec:
       containers:
       - name: {{ .Release.Name }}-server
-        image: myshokpavlo/simple_server:simple_server
+        image: myshokpavlo/simpleserver:1.0.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
         resources:
           limits:
-            memory: "2Gi"
-            cpu: "100m"
+            memory: "50Mi"
+            cpu: "10m"
 
