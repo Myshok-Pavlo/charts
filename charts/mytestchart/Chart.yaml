@@ -1,9 +1,9 @@
-apiVersion: v3
+apiVersion: v2
 name       : App-HelmChart
 description: My Helm chart for Minikube
 type       : application
-version    : 0.1.1 # this is the Helm Chart version
-appVersion : "1.0.1" # this is the version of the application 
+version    : 0.1.2 # this is the Helm Chart version
+appVersion : "1.0.2" # this is the version of the application
 
 
 keywords:
