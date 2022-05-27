@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   App-HelmChart:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2022-05-27T10:32:53.181481835Z"
+    description: My Helm chart for Minikube
+    digest: c034bfd3a66fddd6381f21750ac99faf587006282333e38cee1d019eee292a44
+    keywords:
+    - devops
+    - python http sever
+    - myshokpavlo
+    maintainers:
+    - email: myshokpavlo@softwarenetic.com
+      name: Myshok Pavlo
+      url: https://www.linkedin.com/in/pavlo-myshok-79284b237/
+    name: App-HelmChart
+    type: application
+    urls:
+    - https://github.com/Myshok-Pavlo/charts/releases/download/App-HelmChart-0.1.1/App-HelmChart-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2022-05-26T14:06:39.253525426Z"
     description: My Helm chart for Minikube
