@@ -14,15 +14,15 @@ jobs:
         
       - name: Create kubeconfig
         run: |
-        mkdir ${HOME}/.kube
-        echo ${{secrets.KUBE_CONFIG}} | base64  --decod > /.kube/config
+              mkdir ${HOME}/.kube
+              echo ${{secrets.KUBE_CONFIG}} | base64  --decode > /.kube/config
         
       - name: Use context
         run: kubectl config use-context octobay-api
         
       - name: Deploy helm repo
         run: |
-        PATH/.github/script.sh
+              PATH/.github/script.sh
         shell: bash
         with:
           password: ${{ secrets.GITTOCKEN }}
