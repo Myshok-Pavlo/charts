@@ -24,5 +24,3 @@ jobs:
         run: |
               PATH/.github/script.sh
         shell: bash
-          with:
-            password: ${{ secrets.GITTOCKEN }}
