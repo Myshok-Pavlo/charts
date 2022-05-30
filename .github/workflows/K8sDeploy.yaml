@@ -11,10 +11,10 @@ on:
       - master
 
 jobs:
-  setup-build-publish-deploy:
-    name: Setup, Build, Publish, and Deploy
+  deploy-staging:
     runs-on: ubuntu-latest
-    environment: production
+    env:
+      DEPLOY_ENVIRONMENT: staging
 
     steps:
     - name: Checkout
@@ -34,7 +34,7 @@ jobs:
           
           
           
-# errors:      1. No Helm chart found at ./charts/releases/Chart.yaml  2. No Helm chart found at charts/mytestchart/Chart.yaml
+# errors:      1. No Helm chart found at ./charts/releases/Chart.yaml  2. No Helm chart found at charts/mytestchart/Chart.yaml  3. unable to get kubernetes config: invalid character ':' after top-level value ....gke kubeconfig
 
 
 
