@@ -22,15 +22,19 @@ jobs:
     -
       uses: jmagnusson/deploy-helm-gke-action@v1
       with:
-          docker-image-repo: myshokpavlo/simple_server:simple_server  #done?? 
-          docker-image-tag: simple_server                  #done     info: Docker container tag
+          docker-image-repo: myshokpavlo/simple_server     #done     info: Docker image
+          docker-image-tag: simple_server                  #done     info: Docker image tag
           helm-release-name: App-HelmChart-0.1.0           #done???  info: Name of helm release, type of: ${{ env.APP_NAME }}
-          helm-chart-path: ./charts/releases               #done???  info: Where the Helm chart resides, type of: ./charts/${{ env.APP_NAME }}
+          helm-chart-path: ../charts/mytestchart/          #done???  info: Where the Helm chart resides, type of: ./charts/${{ env.APP_NAME }}
           helm-vars-folder: ./charts/mytestchart/          #done?    info: This folder must contain the file values.yaml
           gke-project: ${{ secrets.GKE_PROJECT }}          #done
           gke-cluster: primary                             #done
           gke-zone: ${{ secrets.GKE_ZONE }}                #done
           gke-sa-key: ${{ secrets.GKE_SA_KEY }}            #done
+          
+          
+          
+# errors:      1. No Helm chart found at ./charts/releases/Chart.yaml
 
 
           
