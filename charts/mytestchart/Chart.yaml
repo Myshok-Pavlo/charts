@@ -2,14 +2,8 @@ apiVersion: v2
 name       : App-HelmChart
 description: My Helm chart for Minikube
 type       : application
-version    : 0.1.5 # this is the Helm Chart version
-appVersion : "2.0.0" # this is the version of the application
-
-
-keywords:
-  - devops
-  - python http sever
-  - myshokpavlo
+version    : 0.1.6   # this is the Helm Chart version
+appVersion : "2.0.1" # this is the version of the application
 
 maintainers:
   - name : Myshok Pavlo
