@@ -7,6 +7,6 @@ spec:
     app: {{ .Release.Name }}-server
   ports:
   - protocol: "TCP"
-    port: 6000
+    port: 7000
     targetPort: 5000
     
