@@ -4,7 +4,8 @@ metadata:
   name: {{ .Release.Name }}-service
 spec:
   selector:
-    app: {{ .Release.Name }}-server
+    matchLabels:
+      app: {{ .Release.Name }}-server
   ports:
   - protocol: "TCP"
     port: 7000
